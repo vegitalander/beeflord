@@ -3,3 +3,5 @@ deployment:
  tasks:
  - export DEPLOYPATH=/home/beeflord/
  - /bin/cp -R . $DEPLOYPATH
+ - bundle install
+ - rails s
