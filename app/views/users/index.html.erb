@@ -1,0 +1,30 @@
+<style>
+  table, tr, td, th {
+    text-align: left;
+    border:1px solid black;
+  }
+</style>
+
+<% number_of_users = @users.count %>
+<h1>Users Index</h1>
+
+<% if number_of_users <= 0 %>
+  <p>There are no users to display.</p>
+<% else %>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Email Address</th>
+    </tr>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.username %></td>
+        <td><%= user.full_name %></td>
+        <td><%= user.email_address %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

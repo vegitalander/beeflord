@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Encrypted username:</strong>
+  <%= @user.encrypted_username %>
+</p>
+
+<p>
+  <strong>Encrypted password:</strong>
+  <%= @user.encrypted_password %>
+</p>
+
+<p>
+  <strong>Encrypted email address:</strong>
+  <%= @user.encrypted_email_address %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Full name:</strong>
+  <%= @user.full_name %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', new_user_path %>
