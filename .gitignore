@@ -15,33 +15,40 @@
 Gemfile.lock
 
 # Ignore the .idea directory
-.idea/
+/.idea/
 
 # Ignore the local environment variable yml
 /config/local_env.yml
 
-# Ignore the DB seeds.
+# Database Ignores
+/config/database.yml
+/config/deploy.rb
 /db/seeds.rb
+/db/schema.rb
+vendor/engines/adva_rbac/spec/db/.sqlite3
+
+# Ignore the default SQLite database.
+/db/.sqlite3
+/db/*.sqlite3
+/db/*.sqlite3-journal
 
 # Ignore all .jbuilder files
 **.jbuilder
 
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
-
 # Ignore all logfiles and tempfiles.
 /log/*
-/tmp/*
+tmp
+tmp/**/
 !/log/.keep
 !/tmp/.keep
+**/.spec.log
+/node_modules
+/yarn-error.log
+/vendor/engines/adva_rbac/spec/log/*
 
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
-
-/node_modules
-/yarn-error.log
 
 /public/assets
 .byebug_history
@@ -49,17 +56,7 @@ Gemfile.lock
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-# recommended additional ignores.
-Capfile
-config/deploy.rb
-config/database.yml
-log/.log
-**/.spec.log
-db/.sqlite3
-db/schema.rb
-db.seeds.rb
-tmp
-tmp/**/
+# Public Files
 public/assets/*
 public/cache/*
 public/images/themes/*
@@ -67,9 +64,10 @@ public/javascripts/cache/*
 public/stylesheets/cache/*
 public/themes
 public/files/*
+
+# recommended additional ignores.
+Capfile
 .swp
-vendor/engines/adva_rbac/spec/db/.sqlite3
-vendor/engines/adva_rbac/spec/log/*
 .DS_Store
 *.so
 *.dylib
