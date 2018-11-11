@@ -18,10 +18,10 @@ Gemfile.lock
 .idea/
 
 # Ignore the local environment variable yml
-config/local_env.yml
+/config/local_env.yml
 
 # Ignore the DB seeds.
-db/seeds.rb
+/db/seeds.rb
 
 # Ignore all .jbuilder files
 **.jbuilder
