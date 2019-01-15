@@ -1,9 +1,32 @@
-<body>
-  <div>
-    <a href="<%= users_path %>">Users</a>
-  </div>
+<style>
+  td:first-child {
+    width: 80px;
+  }
+</style>
 
-  <div>
-    <a href="<%= users_create_path %>">Create new User</a>
-  </div>
+<body>
+  <h1>Products!</h1>
+
+  <table>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Product</th>
+      <th>Description</th>
+    </tr>
+    <!-- Iterate through products table for data -->
+    <tr>
+      <td>
+        <img src="<% asset_path 'Teriyaki-Beef-Jerky.jpg' %>" alt="Teriyaki Image"/>
+      </td>
+      <td>Teriyaki</td>
+      <td>Meat</td>
+    </tr>
+    <tr>
+      <td>
+        <img src="<% asset_path 'habanero-beef-jerky.jpg' %>" alt="Habanero Image"/>
+      </td>
+      <td>Spicy Habanero</td>
+      <td>Spicy Meat</td>
+    </tr>
+  </table>
 </body>
