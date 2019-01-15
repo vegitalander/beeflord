@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  has_many :orders
+
   # GET /users
   # GET /users.json
   def index
@@ -10,10 +12,12 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+
   end
 
   # GET /users/new
   def new
+    Rails.logger.info "DEBUGGING - Params: #{params.inspect}"
     @user = User.new
   end
 
