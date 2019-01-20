@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :orders
   attr_encrypted_options.merge! encode: true
   attr_encrypted :username, key: ENV['USERNAMEKEY']
   attr_encrypted :password, key: ENV['PASSWORDKEY']

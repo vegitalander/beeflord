@@ -16,6 +16,9 @@ module TestCheckout
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    # Secret Key Base
+    config.secret_key_base = '<%= ENV["SECRET_KEY_BASE"] %>'
+
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
